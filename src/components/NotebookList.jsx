@@ -1,4 +1,4 @@
-import { observer } from 'mobx-react';
+// import { observer } from 'mobx-react';
 // store
 import notebookStore from '../stores/notebookStore';
 // components
@@ -14,4 +14,5 @@ const NotebookList = () => {
   return <div>{notebooks}</div>;
 };
 
-export default observer(NotebookList);
+// export default observer(NotebookList);
+export default NotebookList;
