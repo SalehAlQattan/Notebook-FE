@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -10,13 +10,13 @@ const NavBar = () => {
 };
 
 const styles = {
-  fontWeight: 'bold',
-  textTransform: 'uppercase',
-  display: 'flex',
-  justifyContent: 'space-around',
-  padding: '10px',
-  background: '#ccc',
-  color: '#fff',
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  display: "flex",
+  justifyContent: "space-around",
+  padding: "10px",
+  background: "#ccc",
+  color: "#fff",
 };
 
 export default NavBar;

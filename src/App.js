@@ -1,10 +1,11 @@
 // components
-import NotebookDetails from './components/NotebookDetails';
-import NotebookList from './components/NotebookList';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
+import NotebookDetails from "./components/NotebookDetails";
+import NotebookList from "./components/NotebookList";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+
 // router
-import { Route, Switch } from 'react-router';
+import { Route, Switch } from "react-router";
 
 function App() {
   return (

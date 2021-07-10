@@ -1,3 +1,5 @@
+import { observer } from "mobx-react";
+
 const NoteItem = ({ note }) => {
   return (
     <div>
@@ -7,4 +9,4 @@ const NoteItem = ({ note }) => {
   );
 };
 
-export default NoteItem;
+export default observer(NoteItem);
