@@ -1,11 +1,11 @@
-import { observer } from "mobx-react";
+import { observer } from 'mobx-react';
 
 // store
-import notebookStore from "../stores/notebookStore";
+import notebookStore from '../stores/notebookStore';
 
 // components
-import NotebookItem from "./NotebookItem";
-import AddNotebookButton from "./button/AddNotebookButton";
+import NotebookItem from './NotebookItem';
+import AddNotebookButton from './button/AddNotebookButton';
 //
 const NotebookList = () => {
   const notebooks = notebookStore.notebooks
@@ -16,7 +16,7 @@ const NotebookList = () => {
   console.log(notebooks);
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <AddNotebookButton />
       <div>{notebooks}</div>
     </div>

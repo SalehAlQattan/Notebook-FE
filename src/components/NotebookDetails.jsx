@@ -1,9 +1,9 @@
-import { useParams } from "react-router";
-import notebookStore from "../stores/notebookStore";
-import noteStore from "../stores/noteStore";
-import NoteList from "./NoteList";
-import { useHistory } from "react-router-dom";
-import { observer } from "mobx-react";
+import { useParams } from 'react-router';
+import notebookStore from '../stores/notebookStore';
+import noteStore from '../stores/noteStore';
+import NoteList from './NoteList';
+import { useHistory } from 'react-router-dom';
+import { observer } from 'mobx-react';
 
 const NotebookDetails = () => {
   const history = useHistory();
@@ -20,7 +20,7 @@ const NotebookDetails = () => {
   let notes = notebook.notes.map((note) => noteStore.getNoteById(note.id));
 
   return (
-    <div className="container">
+    <div style={styles} className="container">
       <h1>{name}</h1>
       <button className="btn btn-secondary d-block my-2" onClick={goBack}>
         Back
@@ -32,7 +32,12 @@ const NotebookDetails = () => {
 };
 
 const imageStyle = {
-  width: "500px",
+  width: '500px',
+  marginBottom: '7px',
+};
+
+const styles = {
+  textAlign: 'center',
 };
 
 export default observer(NotebookDetails);

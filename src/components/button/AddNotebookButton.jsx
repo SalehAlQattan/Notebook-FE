@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import NotebookModal from "../modals/NotebookModal";
+import React, { useState } from 'react';
+import NotebookModal from '../modals/NotebookModal';
 
 const AddNotebookButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +9,7 @@ const AddNotebookButton = () => {
 
   return (
     <div>
-      <button className="btn btn-primary" onClick={openModal}>
+      <button className="btn btn-primary mt-3" onClick={openModal}>
         Add notebook
       </button>
       <NotebookModal isOpen={isOpen} closeModal={closeModal} />
