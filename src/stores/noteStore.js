@@ -3,6 +3,8 @@ import axios from "axios";
 
 class NoteStore {
   notes = [];
+  loading = true;
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -11,6 +13,7 @@ class NoteStore {
     try {
       const response = await axios.get("http://localhost:8000/notes");
       this.notes = response.data;
+      this.loading = false;
     } catch (error) {
       console.error(error);
     }
@@ -26,7 +29,7 @@ class NoteStore {
         newNote
       );
       this.notes.push(response.data);
-      notebook.push({ id: response.data.id });
+      notebook.notes.push({ id: response.data.id });
 
       console.log(notebook);
     } catch (error) {

@@ -1,4 +1,3 @@
-// store
 import { observer } from "mobx-react";
 import AddNoteButton from "./button/AddNoteButton";
 
@@ -6,9 +5,7 @@ import AddNoteButton from "./button/AddNoteButton";
 import NoteItem from "./NoteItem";
 
 const NoteList = ({ notes, notebook }) => {
-  const notesList = notes
-    // .filter()
-    .map((note) => <NoteItem note={note} key={note.id} />);
+  const notesList = notes.map((note) => <NoteItem note={note} key={note.id} />);
 
   return (
     <>

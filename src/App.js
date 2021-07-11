@@ -1,29 +1,24 @@
-// components
-import NotebookDetails from "./components/NotebookDetails";
-import NotebookList from "./components/NotebookList";
-import Home from "./components/Home";
-import NavBar from "./components/NavBar";
+import { observer } from "mobx-react";
 
-// router
-import { Route, Switch } from "react-router";
+// components
+import NavBar from "./components/NavBar";
+import Routes from "./components/Routes";
+
+// stores
+import notebookStore from "./stores/notebookStore";
+import noteStore from "./stores/noteStore";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Switch>
-        <Route path="/notebooks/:notebookSlug">
-          <NotebookDetails />
-        </Route>
-        <Route path="/notebooks">
-          <NotebookList />
-        </Route>
-        <Route exact path="/">
-          <Home />
-        </Route>
-      </Switch>
+      {noteStore.loading || notebookStore.loading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <Routes />
+      )}
     </div>
   );
 }
 
-export default App;
+export default observer(App);

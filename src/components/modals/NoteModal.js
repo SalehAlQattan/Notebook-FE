@@ -21,12 +21,21 @@ const NoteModal = ({ isOpen, closeModal, notebook }) => {
     closeModal();
   };
 
-  const handleChange = (event) => {
+  const handleName = (event) => {
     setNote({
       ...note,
       [event.target.name]: event.target.value,
     });
     console.log(note);
+  };
+
+  const handleBody = (event) => {
+    let text = event.target.value;
+    console.log(note);
+    setNote({
+      ...note,
+      [event.target.name]: text,
+    });
   };
 
   return (
@@ -41,7 +50,7 @@ const NoteModal = ({ isOpen, closeModal, notebook }) => {
           <label>Title</label>
           <input
             name="title"
-            onChange={handleChange}
+            onChange={handleName}
             type="text"
             className="form-control"
             placeholder="Enter note name"
@@ -51,7 +60,7 @@ const NoteModal = ({ isOpen, closeModal, notebook }) => {
           <label>Body</label>
           <textarea
             name="body"
-            onChange={handleChange}
+            onChange={handleBody}
             className="form-control"
             col="10"
             row="10"

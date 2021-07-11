@@ -20,7 +20,7 @@ const NotebookDetails = () => {
   let notes = notebook.notes.map((note) => noteStore.getNoteById(note.id));
 
   return (
-    <div>
+    <div className="container">
       <h1>{name}</h1>
       <button className="btn btn-secondary d-block my-2" onClick={goBack}>
         Back
